@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
-
+  #commit lab-escalabilidad
   # GET /users
   def index
     @users = User.all
