@@ -20,7 +20,7 @@ class BuyController < ApplicationController
         :headers => { 'Content-Type' => 'application/json' }
        }
 
-       results = HTTParty.post("http://192.168.99.101:3000/sales", options )
+       results = HTTParty.post("http://192.168.99.103:3000/sales", options )
 
     end
 
@@ -28,13 +28,13 @@ class BuyController < ApplicationController
 
   def checkProduct(id)
 
-    results = HTTParty.get("http://192.168.99.101:3000/products/" + id.to_s )
+    results = HTTParty.get("http://192.168.99.103:3000/products/" + id.to_s )
     return results
   end
 
   def checkUser(id)
 
-    results = HTTParty.get("http://192.168.99.101:3000/users/" + id.to_s )
+    results = HTTParty.get("http://192.168.99.103:3000/users/" + id.to_s )
     return results
 
   end
